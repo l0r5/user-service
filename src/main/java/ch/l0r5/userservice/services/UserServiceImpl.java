@@ -18,12 +18,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void addUser(int id) {
+    public void addUser(long id) {
         log.info("Adding user {}", id);
     }
 
     @Override
-    public void removeUser(int id) {
+    public void removeUser(long id) {
         log.info("Removing user {}", id);
     }
 }
