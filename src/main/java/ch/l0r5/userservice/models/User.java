@@ -4,18 +4,26 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Builder
-@Entity(name = "users")
+@Entity
+@Builder(toBuilder = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue
-    private final Long id;
+    private Long id;
 
     @Column
-    private final String username;
+    private String username;
 
 }
