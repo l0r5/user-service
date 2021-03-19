@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+    <configuration name="run-dev-postgres" default="false" factoryName="Spring Boot"
+        type="SpringBootApplicationConfigurationType">
+        <method v="2">
+            <option name="Make" enabled="true" />
+        </method>
+        <module name="user-service" />
+        <option name="ACTIVE_PROFILES" value="dev-postgres" />
+        <option name="ALTERNATIVE_JRE_PATH" />
+        <option name="SPRING_BOOT_MAIN_CLASS" value="ch.l0r5.userservice.UserServiceApplication" />
+    </configuration>
+</component>

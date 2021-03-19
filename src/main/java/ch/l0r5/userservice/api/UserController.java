@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -30,13 +29,13 @@ public class UserController {
     }
 
     @PostMapping("add/{id}")
-    public ResponseEntity<String> addUser(@PathVariable int id) {
+    public ResponseEntity<String> addUser(@PathVariable long id) {
         userService.addUser(id);
         return ResponseEntity.ok("Added user " + id);
     }
 
     @PostMapping("remove/{id}")
-    public ResponseEntity<String> removeUser(@PathVariable int id) {
+    public ResponseEntity<String> removeUser(@PathVariable long id) {
         userService.removeUser(id);
         return ResponseEntity.ok("Removed user " + id);
     }
